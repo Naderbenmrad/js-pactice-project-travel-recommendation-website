@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+    <meta charset="UTF-8">
+    <title>Travel Recommendation</title>
+    <link rel="stylesheet" href="./travel_recommendation.css">
+    </head>
+
+    <body>
+        <nav>
+            <h1>TravelBloom</h1>
+            <ul>
+                <li><a href="#home" id="home">Home </a></li>
+                <li><a href="#about" id="about">About Us </a></li>
+                <li><a href="#contact" id="contact">Contact Us </a></li>
+                <li><input type="text" id="searchInput" placeholder="Enter a destination or keyword"></li>
+                <li><button id='btnSearch'>Search</button></li>
+                <li><button id='btnClear'>Clear</button></li>
+            </ul>
+        </nav>
+
+        <div class="main">
+
+            <section class="section home" id="home">
+                
+                <div class="home-title-container">
+                    <h1>EXPLORE DREAM DESTINATION</h1>
+                <div>
+                
+                <div class="home-text-container">
+                    <p>It encouurages exploration of unfamiliar territories, embracing diverse cultures and landscapes, while pursuing the desired destination that captivates the heart and ignites a sense of wonder</p>
+                <div>
+                
+                <button id='btnBookNow'>BOOK NOW</button>
+                    
+            </section>
+
+            <section class="section about" id="about">
+                <div class="about-title-container">
+                    <h1 class="section-title">ABOUT US</h1>
+                <div>
+                
+                <div class="about-text-container">
+                    <p>Welcome to our Company! We are a team of passionate individuals dedicated to providing excellent services/products to our customers. Our mission is to provide the best experience for people traveling to different destinations around the world.</p>
+                <div>
+
+                <h1>Our Team</h1>
+                <div class="about-team-container">
+                    
+                    <div class="member-card">
+                        <h2>John Doe</h2>
+                        <p>John is responsible for...</p>
+                        <button id='btnTeamMember'>CEO</button>
+                    </div>
+                    <div class="member-card">
+                        <h2>Celina Thomas</h2>
+                        <p>Celina is responsible for...</p>
+                        <button id='btnTeamMember'>Team Lead</button>
+                    </div>
+                    <div class="member-card">
+                        <h2>Mike Tysen</h2>
+                        <p>Mike is responsible for...</p>
+                        <button id='btnTeamMember'>Delivery Head</button>
+                    </div>
+                    
+                <div>
+            </section>
+
+            <section class="section contact" id="contact">
+
+                <h1 class="section-title">CONTACT US</h1>
+
+                <form id="contactForm">
+                    <div>
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div>
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div>
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" onclick="thankyou()">Submit</button>
+                </form>
+
+            </section>
+
+        </div>
+
+        <script src="./travel_recommendation.js"></script>
+    </body>
+</html>
