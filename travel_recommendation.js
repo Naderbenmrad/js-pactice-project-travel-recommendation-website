@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const nav = document.querySelector('nav');
     const headerOffset = nav.offsetHeight;
-    document.querySelectorAll('section[id]').forEach(sec => sec.style.scrollMarginTop = `${headerOffset + 10}px`);
+    document.querySelectorAll('section[id]').forEach(sec => { sec.style.scrollMarginTop = `${headerOffset + 10}px`; });
     document.querySelectorAll('nav ul li a[href^="#"]').forEach(link => link.addEventListener('click', e => {
         e.preventDefault();
         const id = link.getAttribute('href').slice(1);
