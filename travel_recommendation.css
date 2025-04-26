@@ -1,17 +1,91 @@
-body{
-    text-align: center;
-    background-image: url('https://www.discoverhongkong.com/content/dam/dhk/intl/explore/tips-for-making-your-trip-to-hong-kong/tips-for-making-your-trip-to-hong-kong-1920x1080.jpg'); /* Replace with the actual path to your image */
-    background-repeat: no-repeat; 
-    background-size: cover; 
-    background-attachment: fixed; 
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100vw;
+    height: 100%;
+    overflow-x: hidden;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.bg-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('https://www.discoverhongkong.com/content/dam/dhk/intl/explore/tips-for-making-your-trip-to-hong-kong/tips-for-making-your-trip-to-hong-kong-1920x1080.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    filter: blur(4px) brightness(0.6);
+    z-index: -2;
+}
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: -1;
+}
+#results {
+    width: 400px;
+    position: fixed;
+    top: 60px;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 20px;
+    max-height: calc(100vh - 60px);
+    overflow-y: auto;
+    z-index: 10;
+}
+.recommendation-card {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 16px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 350px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    text-align: left;
+    
+}
+.recommendation-card:hover {
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    scale: 1.02;
+    transition: all 0.3s ease-in-out;
+}
+.recommendation-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 12px;
+}
+.recommendation-card h3 {
+    margin: 0 0 8px;
+    font-size: 1.25rem;
+}
+.recommendation-card p {
+    margin: 0;
+    font-size: 1rem;
+    color: #333;
 }
 .main{
+    flex: 1;
     padding-top: 40px;
-    width: 100%;
+    width: 100vw;
+    padding-top: 60px;
+    padding-left: 20px;
+    padding-right: 320px;
 }
 .section{
     margin: 10%;
     width: 100%;
+    height: 100%;
 }
 .section-title{
     font-size: 40px;
@@ -31,7 +105,7 @@ nav {
     top: 0;
     left: 0;
     height: 40px;
-    width: 100%;
+    width: 100vw;
     z-index: 100;
 }
 nav h1 {
